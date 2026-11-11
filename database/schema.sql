@@ -103,8 +103,8 @@ CREATE TABLE IF NOT EXISTS employee_hierarchy (
   UNIQUE KEY uq_hierarchy_employee (employee_id),
   CONSTRAINT fk_eh_company FOREIGN KEY (company_id) REFERENCES companies(id) ON DELETE CASCADE,
   CONSTRAINT fk_eh_employee FOREIGN KEY (employee_id) REFERENCES users(id) ON DELETE CASCADE,
-  CONSTRAINT fk_eh_manager FOREIGN KEY (manager_id) REFERENCES users(id) ON DELETE CASCADE,
-  CONSTRAINT chk_eh_self CHECK (employee_id <> manager_id)
+  CONSTRAINT fk_eh_manager FOREIGN KEY (manager_id) REFERENCES users(id) ON DELETE CASCADE
+  -- employee <> manager is enforced by the API (MySQL 8 forbids CHECKs on FK-cascade columns)
 ) ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS approval_delegations (
@@ -120,8 +120,8 @@ CREATE TABLE IF NOT EXISTS approval_delegations (
   CONSTRAINT fk_dg_company FOREIGN KEY (company_id) REFERENCES companies(id) ON DELETE CASCADE,
   CONSTRAINT fk_dg_delegator FOREIGN KEY (delegator_id) REFERENCES users(id) ON DELETE CASCADE,
   CONSTRAINT fk_dg_delegate FOREIGN KEY (delegate_id) REFERENCES users(id) ON DELETE CASCADE,
-  CONSTRAINT chk_dg_dates CHECK (ends_on >= starts_on),
-  CONSTRAINT chk_dg_self CHECK (delegator_id <> delegate_id)
+  CONSTRAINT chk_dg_dates CHECK (ends_on >= starts_on)
+  -- delegator <> delegate is enforced by the API (MySQL 8 forbids CHECKs on FK-cascade columns)
 ) ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS refresh_tokens (
