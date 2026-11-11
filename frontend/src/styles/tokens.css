@@ -1,0 +1,38 @@
+/* FinGuard design tokens: a ledger-paper palette. Warm paper, ink navy, brass accents. */
+:root {
+  --paper: #f2eee3;
+  --paper-deep: #e8e2d2;
+  --sheet: #faf8f1;
+  --ink: #16212e;
+  --ink-soft: #3a4756;
+  --ink-faint: #6c7684;
+  --rule: #d8d1bf;
+  --rule-strong: #b9b09a;
+
+  --primary: #1b4b82;
+  --primary-hover: #143a66;
+  --primary-ink: #f7f4ea;
+  --brass: #b8893b;
+  --brass-soft: rgba(184, 137, 59, 0.14);
+
+  --ok: #2d6a4f;
+  --ok-bg: #e1ebdd;
+  --warn: #a8670b;
+  --warn-bg: #f3e4c2;
+  --risk: #a23b2a;
+  --risk-bg: #f1d9d1;
+  --info: #1b4b82;
+  --info-bg: #dce5f0;
+
+  --sidebar: #13202d;
+  --sidebar-ink: #d9d4c4;
+  --sidebar-faint: #8e96a0;
+  --sidebar-rule: rgba(217, 212, 196, 0.14);
+
+  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --radius: 3px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}

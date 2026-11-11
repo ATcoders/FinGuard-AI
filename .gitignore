@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.venv/
+__pycache__/
+*.pyc
+backend/.env
+backend/uploaded_invoices/*
+!backend/uploaded_invoices/.gitkeep
+backend/data/raw/*
+backend/data/processed/*
+backend/data/training/*
+backend/data/validation/*
+backend/data/testing/*
+backend/data/ground_truth/*
+*.joblib
+.DS_Store
