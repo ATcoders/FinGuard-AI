@@ -9,7 +9,7 @@ const PATHS = {
   x: <><path d="M6 6l12 12M18 6L6 18" /></>,
   edit: <><path d="M4 20h4L19 9l-4-4L4 16zM13 7l4 4" /></>,
   trash: <><path d="M5 7h14M10 7V4h4v3M7 7l1 13h8l1-13" /></>,
-  mark: <><path d="M6 8h12M6 12h12M6 16h7" /></>,
+  mark: <><path d="M8 5v14M8 6h9M8 12h6" /></>,
 };
 
 export default function Icon({ name, size = 18, stroke = 1.7 }) {
